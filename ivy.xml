@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info organisation="com.eysys" module="holistic"/>
+    <configurations>
+        <conf name="compile" visibility="public"/>
+        <conf name="test" visibility="private"/>
+    </configurations>
+    <publications/>
+    <dependencies>
+        <dependency org="io.netty" name="netty-all" rev="4.0.25.Final" conf="compile->default"/>
+	<dependency org="org.seleniumhq.selenium" name="selenium-java" rev="2.41.0">
+		<exclude name="guava" />
+	</dependency>
+	<dependency org="commons-logging" name="commons-logging" rev="1.2"/>
+        <dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.1.5" conf="compile->default"/>
+        <dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.1.5" conf="compile->default"/>
+        <dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.1.5" conf="compile->default"/>
+        <dependency org="org.codehaus.jackson" name="jackson-core-asl" rev="1.9.13" conf="compile->default"/>
+        <dependency org="com.fasterxml.jackson.dataformat" name="jackson-dataformat-xml" rev="2.4.3"
+                    conf="compile->default"/>
+        <dependency org="junit" name="junit" rev="4.11" conf="compile->default"/>
+        <dependency org="org.mongodb" name="mongo-java-driver" rev="2.13.2" conf="compile->default"/>
+        <dependency org="org.elasticsearch" name="elasticsearch" rev="1.4.5" conf="compile->default"/>
+        <dependency org="de.neuland-bfi" name="jade4j" rev="0.4.0" conf="compile->default"/>
+        <dependency org="org.pegdown" name="pegdown" rev="1.4.2" conf="compile->default"/>
+        <dependency org="org.eclipse.mylyn.github" name="org.eclipse.egit.github.core" rev="2.1.5"
+                    conf="compile->default"/>
+        <dependency org="joda-time" name="joda-time" rev="2.3" conf="compile->default"/>
+        <dependency org="javax.mail" name="mail" rev="1.4.7" conf="compile->default"/>
+        <dependency org="org.scribe" name="scribe" rev="1.3.5" conf="compile->default"/>
+        <dependency org="org.jongo" name="jongo" rev="1.0" conf="compile->default"/>
+        <dependency org="org.openid4java" name="openid4java" rev="0.9.8" conf="compile->default"/>
+        <dependency org="com.google.code" name="sitemapgen4j" rev="1.0.1" conf="compile->default"/>
+        <dependency org="com.github.detro" name="phantomjsdriver" rev="1.2.0" conf="compile->default"/>
+
+
+        <dependency org="com.google.api-ads" name="adwords-axis" rev="2.2.0" conf="compile->default"/>
+        <dependency org="com.google.http-client" name="google-http-client" rev="1.20.0" conf="compile->default"/>
+        <dependency org="com.google.api-client" name="google-api-client" rev="1.20.0" conf="compile->default"/>
+        <dependency org="com.google.http-client" name="google-http-client-jackson" rev="1.20.0"
+                    conf="compile->default"/>
+        <dependency org="com.google.api-ads" name="ads-lib" rev="2.2.0" conf="compile->default"/>
+        <dependency org="com.google.gdata" name="core" rev="1.47.1" conf="compile->default"/>
+
+
+        <dependency org="net.sf.opencsv" name="opencsv" rev="2.3" conf="compile->default"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.3.3" conf="compile->default"/>
+        <dependency org="jfree" name="jfreechart" rev="1.0.13" conf="compile->default"/>
+        <dependency org="commons-lang" name="commons-lang" rev="2.6" conf="compile->default"/>
+        <dependency org="org.ow2.asm" name="asm-all" rev="4.1" conf="compile->default"/>
+        <dependency org="net.coobird" name="thumbnailator" rev="0.4.7" conf="compile->default"/>
+        <dependency org="com.fasterxml.jackson.datatype" name="jackson-datatype-joda" rev="2.4.0-rc3"
+                    conf="compile->default"/>
+        <!--<dependency org="com.fasterxml.jackson.dataformat" name="jackson-dataformat-xml" rev="2.5.1" conf="compile->default"/>-->
+        <dependency org="org.slf4j" name="slf4j-api" rev="1.7.7" conf="compile->default"/>
+        <dependency org="de.flapdoodle.embed" name="de.flapdoodle.embed.mongo" rev="1.45" conf="compile->default"/>
+        <dependency org="com.eysys" name="platform" rev="v1.11-dev7-82d096" conf="compile->compile" />
+        <dependency org="com.eysys" name="search" rev="1.9-rc1" conf="compile->compile">
+            <exclude module="knotty"/>
+            <exclude module="platform"/>
+        </dependency>
+        <dependency org="com.eysys" name="data" rev="1.11-dev4-120c5a1" conf="compile->compile">
+            <exclude module="knotty"/>
+            <exclude module="platform"/>
+        </dependency>
+        <dependency org="com.eysys" name="cms" rev="v1.11-dev3-a2bea13147" conf="compile->compile">
+            <exclude module="knotty"/>
+            <exclude module="platform"/>
+        </dependency>
+        <dependency org="com.eysys" name="monetise" rev="1.11-rc5-c6ff16" conf="compile->compile">
+            <exclude module="knotty"/>
+            <exclude module="platform"/>
+        </dependency>
+        <dependency org="com.eysys" name="personalise" rev="v1.11-dev20-c0a6fa" conf="compile->compile"/>
+        <dependency org="org.imgscalr" name="imgscalr-lib" rev="4.2" conf="compile->default"/>
+        <exclude module="asm"/>
+        <exclude module="jruby"/>
+        <exclude module="slf4j-simple"/>
+        <exclude org="io.netty" module="netty-tcnative"/>
+    </dependencies>
+</ivy-module>
